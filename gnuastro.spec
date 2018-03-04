@@ -11,6 +11,7 @@ License:	GPL v3+
 Group:		Applications/Science
 Source0:	http://ftp.gnu.org/gnu/gnuastro/%{name}-%{version}.tar.lz
 # Source0-md5:	2ed4ed0357a373c19291b1c67fd8bd8f
+Patch0:		%{name}-info.patch
 URL:		http://www.gnu.org/software/gnuastro/
 BuildRequires:	autoconf >= 2.69
 BuildRequires:	automake
@@ -74,6 +75,7 @@ Statyczna biblioteka Gnuastro.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 # regenerate for as-needed to work
