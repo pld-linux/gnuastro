@@ -1,93 +1,102 @@
---- gnuastro-0.5/doc/gnuastro.texi.orig	2017-12-22 13:35:03.000000000 +0100
-+++ gnuastro-0.5/doc/gnuastro.texi	2018-03-04 08:17:34.176850007 +0100
-@@ -44,54 +44,54 @@
+--- gnuastro-0.7/doc/gnuastro.texi.orig	2018-08-08 14:30:59.000000000 +0200
++++ gnuastro-0.7/doc/gnuastro.texi	2018-12-19 21:30:37.749829833 +0100
+@@ -44,60 +44,60 @@
  @c To include in the info directory.
  @dircategory Astronomy
  @direntry
 -* Gnuastro: (gnuastro).       GNU Astronomy Utilities.
 -* libgnuastro: (gnuastro)Gnuastro library. Full Gnuastro library doc.
 +* Gnuastro: (gnuastro).			GNU Astronomy Utilities
-+* libgnuastro: (gnuastro)Gnuastro library.	Full Gnuastro library doc.
++* libgnuastro: (gnuastro)Gnuastro library. Full Gnuastro library doc
  
--* help-gnuastro: (gnuastro)help-gnuastro mailing list. Getting help.
-+* help-gnuastro: (gnuastro)help-gnuastro mailing list.	Getting help.
+ * help-gnuastro: (gnuastro)help-gnuastro mailing list. Getting help.
  
 -* bug-gnuastro: (gnuastro)Report a bug. How to report bugs
 +* bug-gnuastro: (gnuastro)Report a bug.	How to report bugs
  
 -* Arithmetic: (gnuastro)Arithmetic. Arithmetic operations on pixels.
 -* astarithmetic: (gnuastro)Invoking astarithmetic. Options to Arithmetic.
-+* Arithmetic: (gnuastro)Arithmetic.	Arithmetic operations on pixels.
-+* astarithmetic: (gnuastro)astarithmetic.	Options to Arithmetic.
++* Arithmetic: (gnuastro)Arithmetic.	Arithmetic operations on pixels
++* astarithmetic: (gnuastro)astarithmetic. Options to Arithmetic.
  
 -* BuildProgram: (gnuastro)BuildProgram. Compile and run programs using Gnuastro's library.
 -* astbuildprog: (gnuastro)Invoking astbuildprog. Options to BuildProgram.
-+* BuildProgram: (gnuastro)BuildProgram.	Compile and run programs using Gnuastro's library.
-+* astbuildprog: (gnuastro)astbuildprog.	Options to BuildProgram.
++* BuildProgram: (gnuastro)BuildProgram.	Compile and run programs using Gnuastro's library
++* astbuildprog: (gnuastro)astbuildprog.	Options to BuildProgram
  
 -* ConvertType: (gnuastro)ConvertType. Convert different file types.
 -* astconvertt: (gnuastro)Invoking astconvertt. Options to ConvertType.
-+* ConvertType: (gnuastro)ConvertType.	Convert different file types.
-+* astconvertt: (gnuastro)astconvertt.	Options to ConvertType.
++* ConvertType: (gnuastro)ConvertType.	Convert different file types
++* astconvertt: (gnuastro)astconvertt.	Options to ConvertType
  
 -* Convolve: (gnuastro)Convolve. Convolve an input file with kernel.
 -* astconvolve: (gnuastro)Invoking astconvolve. Options to Convolve.
-+* Convolve: (gnuastro)Convolve.		Convolve an input file with kernel.
-+* astconvolve: (gnuastro)astconvolve.	Options to Convolve.
++* Convolve: (gnuastro)Convolve.		Convolve an input file with kernel
++* astconvolve: (gnuastro)astconvolve.	Options to Convolve
  
 -* CosmicCalculator: (gnuastro)CosmicCalculator. For cosmological params.
 -* astcosmiccal: (gnuastro)Invoking astcosmiccal. Options to CosmicCalculator.
-+* CosmicCalculator: (gnuastro)CosmicCalculator.	For cosmological params.
-+* astcosmiccal: (gnuastro)astcosmiccal.	Options to CosmicCalculator.
++* CosmicCalculator: (gnuastro)CosmicCalculator. For cosmological params
++* astcosmiccal: (gnuastro)astcosmiccal.	Options to CosmicCalculator
  
 -* Crop: (gnuastro)Crop. Crop region(s) from image(s).
 -* astcrop: (gnuastro)Invoking astcrop. Options to Crop.
-+* Crop: (gnuastro)Crop.			Crop region(s) from image(s).
-+* astcrop: (gnuastro)astcrop.		Options to Crop.
++* Crop: (gnuastro)Crop.			Crop region(s) from image(s)
++* astcrop: (gnuastro)astcrop.		Options to Crop
  
 -* Fits: (gnuastro)Fits. View and manipulate FITS extensions and keywords.
 -* astfits: (gnuastro)Invoking astfits. Options to Fits.
-+* Fits: (gnuastro)Fits.			View and manipulate FITS extensions and keywords.
-+* astfits: (gnuastro)astfits.		Options to Fits.
++* Fits: (gnuastro)Fits.			View and manipulate FITS extensions and keywords
++* astfits: (gnuastro)astfits.		Options to Fits
  
 -* MakeCatalog: (gnuastro)MakeCatalog. Make a catalog from labeled image.
 -* astmkcatalog: (gnuastro)Invoking astmkcatalog. Options to MakeCatalog.
-+* MakeCatalog: (gnuastro)MakeCatalog.	Make a catalog from labeled image.
-+* astmkcatalog: (gnuastro)astmkcatalog.	Options to MakeCatalog.
++* MakeCatalog: (gnuastro)MakeCatalog.	Make a catalog from labeled image
++* astmkcatalog: (gnuastro)astmkcatalog.	Options to MakeCatalog
  
 -* MakeNoise: (gnuastro)MakeNoise. Make (add) noise to an image.
 -* astmknoise: (gnuastro)Invoking astmknoise. Options to MakeNoise.
-+* MakeNoise: (gnuastro)MakeNoise.	Make (add) noise to an image.
-+* astmknoise: (gnuastro)astmknoise.	Options to MakeNoise.
++* MakeNoise: (gnuastro)MakeNoise.	Make (add) noise to an image
++* astmknoise: (gnuastro)astmknoise.	Options to MakeNoise
  
 -* MakeProfiles: (gnuastro)MakeProfiles. Make mock profiles.
 -* astmkprof: (gnuastro)Invoking astmkprof. Options to MakeProfiles.
-+* MakeProfiles: (gnuastro)MakeProfiles.	Make mock profiles.
-+* astmkprof: (gnuastro)astmkprof.	Options to MakeProfiles.
++* MakeProfiles: (gnuastro)MakeProfiles.	Make mock profiles
++* astmkprof: (gnuastro)astmkprof.	Options to MakeProfiles
+ 
+-* Match: (gnuastro)Match. Match two separate catalogs.
+-* astmatch: (gnuastro)Invoking astmatch. Options to Match.
++* Match: (gnuastro)Match.		Match two separate catalogs
++* astmatch: (gnuastro)astmatch.		Options to Match
  
 -* NoiseChisel: (gnuastro)NoiseChisel. Detect signal in noise.
 -* astnoisechisel: (gnuastro)Invoking astnoisechisel. Options to NoiseChisel.
-+* NoiseChisel: (gnuastro)NoiseChisel.	Detect signal in noise.
-+* astnoisechisel: (gnuastro)astnoisechisel.	Options to NoiseChisel.
++* NoiseChisel: (gnuastro)NoiseChisel.	Detect signal in noise
++* astnoisechisel: (gnuastro)astnoisechisel. Options to NoiseChisel.
+ 
+-* Segment: (gnuastro)Segment. Segment detections based on signal structure.
+-* astsegment: (gnuastro)Invoking astsegment. Options to Segment.
++* Segment: (gnuastro)Segment.		Segment detections based on signal structure.
++* astsegment: (gnuastro)astsegment.	Options to Segment
  
 -* Statistics: (gnuastro)Statistics. Get image Statistics.
 -* aststatistics: (gnuastro)Invoking aststatistics. Options to Statistics.
-+* Statistics: (gnuastro)Statistics.	Get image Statistics.
-+* aststatistics: (gnuastro)aststatistics.	Options to Statistics.
++* Statistics: (gnuastro)Statistics.	Get image Statistics
++* aststatistics: (gnuastro)aststatistics.	Options to Statistics
  
 -* Table: (gnuastro)Table. Read and write FITS binary or ASCII tables.
 -* asttable: (gnuastro)Invoking asttable. Options to Table.
-+* Table: (gnuastro)Table.		Read and write FITS binary or ASCII tables.
-+* asttable: (gnuastro)asttable.		Options to Table.
++* Table: (gnuastro)Table.		Read and write FITS binary or ASCII tables
++* asttable: (gnuastro)asttable.		Options to Table
  
 -* Warp: (gnuastro)Warp. Warp a dataset to a new grid.
 -* astwarp: (gnuastro)Invoking astwarp. Options to Warp.
-+* Warp: (gnuastro)Warp.			Warp a dataset to a new grid.
-+* astwarp: (gnuastro)astwarp.		Options to Warp.
++* Warp: (gnuastro)Warp.			Warp a dataset to a new grid
++* astwarp: (gnuastro)astwarp.		Options to Warp
  
  @end direntry
  
-@@ -343,7 +343,7 @@
+@@ -353,7 +353,7 @@
  
  Fits
  
@@ -96,7 +105,7 @@
  
  Invoking Fits
  
-@@ -354,11 +354,11 @@
+@@ -364,11 +364,11 @@
  
  * Recognized file formats::     Recognized file formats
  * Color::                       Some explanations on color.
@@ -110,7 +119,7 @@
  
  Data manipulation
  
-@@ -372,7 +372,7 @@
+@@ -382,7 +382,7 @@
  * Crop modes::                  Basic modes to define crop region.
  * Crop section syntax::         How to define a section to crop.
  * Blank pixels::                Pixels with no value.
@@ -119,7 +128,7 @@
  
  Invoking Crop
  
-@@ -383,7 +383,7 @@
+@@ -393,7 +393,7 @@
  
  * Reverse polish notation::     The current notation style for Arithmetic
  * Arithmetic operators::        List of operators known to Arithmetic
@@ -128,7 +137,7 @@
  
  Convolve
  
-@@ -391,7 +391,7 @@
+@@ -401,7 +401,7 @@
  * Frequency domain and Fourier operations::  Using frequencies in input.
  * Spatial vs. Frequency domain::  When to use which?
  * Convolution kernel::          How to specify the convolution kernel.
@@ -137,7 +146,7 @@
  
  Spatial domain convolution
  
-@@ -416,7 +416,7 @@
+@@ -426,7 +426,7 @@
  * Warping basics::              Basics of coordinate transformation.
  * Merging multiple warpings::   How to merge multiple matrices.
  * Resampling::                  Warping an image is re-sampling it.
@@ -146,7 +155,7 @@
  
  Data analysis
  
-@@ -430,7 +430,7 @@
+@@ -441,7 +441,7 @@
  * Histogram and Cumulative Frequency Plot::  Basic definitions.
  * Sigma clipping::              Definition of @mymath{\sigma}-clipping.
  * Sky value::                   Definition and derivation of the Sky value.
@@ -155,16 +164,25 @@
  
  Sky value
  
-@@ -441,7 +441,7 @@
+@@ -452,7 +452,7 @@
  NoiseChisel
  
- * NoiseChisel changes after publication::  Changes to the software after publication.
+ * NoiseChisel changes after publication::  NoiseChisel updates after paper's publication.
 -* Invoking astnoisechisel::     Options and arguments for NoiseChisel.
 +* astnoisechisel::              Options and arguments for NoiseChisel.
  
  Invoking NoiseChisel
  
-@@ -456,7 +456,7 @@
+@@ -463,7 +463,7 @@
+ Segment
+ 
+ * Segment changes after publication::  Segment updates after paper's publication.
+-* Invoking astsegment::         Inputs, outputs and options to Segment
++* astsegment::                  Inputs, outputs and options to Segment
+ 
+ Invoking Segment
+ 
+@@ -477,7 +477,7 @@
  * Quantifying measurement limits::  For comparing different catalogs.
  * Measuring elliptical parameters::  Estimating elliptical parameters.
  * Adding new columns to MakeCatalog::  How to add new columns.
@@ -173,7 +191,7 @@
  
  Invoking MakeCatalog
  
-@@ -467,7 +467,7 @@
+@@ -488,7 +488,7 @@
  
  Match
  
@@ -182,7 +200,7 @@
  
  Modeling and fitting
  
-@@ -480,7 +480,7 @@
+@@ -501,7 +501,7 @@
  * If convolving afterwards::    Considerations for convolving later.
  * Flux Brightness and magnitude::  About these measures of energy.
  * Profile magnitude::           Definition of total profile magnitude.
@@ -191,7 +209,7 @@
  
  Modeling basics
  
-@@ -501,7 +501,7 @@
+@@ -522,7 +522,7 @@
  MakeNoise
  
  * Noise basics::                Noise concepts and definitions.
@@ -200,7 +218,7 @@
  
  Noise basics
  
-@@ -518,7 +518,7 @@
+@@ -539,7 +539,7 @@
  
  * Distance on a 2D curved space::  Distances in 2D for simplicity
  * Extending distance concepts to 3D::  Going to 3D (our real universe).
@@ -209,7 +227,7 @@
  
  Invoking CosmicCalculator
  
-@@ -540,7 +540,7 @@
+@@ -561,7 +561,7 @@
  
  BuildProgram
  
@@ -218,7 +236,7 @@
  
  Gnuastro library
  
-@@ -769,7 +769,7 @@
+@@ -803,7 +803,7 @@
  See @ref{Known issues} if you confront any complications. For each program
  there is an `Invoke ProgramName' sub-section in this book which explains
  how the programs should be run on the command-line (for example
@@ -227,7 +245,16 @@
  by running @command{$ info astprogname} (for example @command{info
  asttable}). The `Invoke ProgramName' sub-section starts with a few examples
  of each program and goes on to explain the invocation details. See
-@@ -2420,7 +2420,7 @@
+@@ -1835,7 +1835,7 @@
+ @ref{Convolve}. If you only want practical information on running a
+ program, for example its options/configuration, input(s) and output(s),
+ please consult the subsection titled ``Invoking ProgramName'', for example
+-see @ref{Invoking astnoisechisel}. For an explanation of the conventions we
++see @ref{astnoisechisel}. For an explanation of the conventions we
+ use in the example codes through the book, please see @ref{Conventions}.
+ 
+ @menu
+@@ -2392,7 +2392,7 @@
  @key{<ENTER>}.
  
  You don't need to start from the top of the manual every time. For example,
@@ -236,7 +263,7 @@
  general, all programs have such an ``Invoking ProgramName'' section in this
  book. These sections are specifically for the description of inputs,
  outputs and configuration options of each program. You can access them
-@@ -3008,7 +3008,7 @@
+@@ -2976,7 +2976,7 @@
  that since this is done through matrix multiplication, order matters in the
  separate operations. In fact through Warp's @option{--matrix} option, you
  can directly request your desired final warp and don't have to break it up
@@ -245,7 +272,7 @@
  
  Fortunately these datasets are already aligned to the same pixel grid, so
  you don't actually need the files that were just generated. You can safely
-@@ -3346,8 +3346,8 @@
+@@ -3467,8 +3467,8 @@
  below will print some basic information about the distribution (minimum,
  maximum, median and etc), along with a cute little ASCII histogram to
  visually help you understand the distribution on the command-line without
@@ -256,7 +283,7 @@
  coarse and general information on the input dataset. It is also useful when
  working on a server (where you may not have graphic user interface), and
  finally, its fast.
-@@ -3386,7 +3386,7 @@
+@@ -3539,7 +3539,7 @@
  @end example
  
  We can now feed this catalog into MakeProfiles to build the apertures for
@@ -265,7 +292,7 @@
  important for this particular job is @option{--mforflatpix}, it tells
  MakeProfiles that the values in the magnitude column should be used for
  each pixel of a flat profile. Without it, MakeProfiles would build the
-@@ -5371,7 +5371,7 @@
+@@ -6851,7 +6851,7 @@
  The command-line text that you type is passed onto the shell (or program
  managing the command-line) as a string of characters. See the ``Invoking
  ProgramName'' sections in this manual for some examples of commands with
@@ -274,7 +301,7 @@
  broken up into separate @emph{tokens} or @emph{words} by any
  @emph{metacharacters} (like space, tab, @command{|}, @command{>} or
  @command{;}) that might exist in the text. To learn more, please see the
-@@ -5624,7 +5624,7 @@
+@@ -7104,7 +7104,7 @@
  
  On the other hand, some options can be called multiple times in one run of
  a program and can thus take multiple values (for example see the
@@ -283,7 +310,7 @@
  order of stored values is the same order that you specified on the
  command-line.
  
-@@ -6185,7 +6185,7 @@
+@@ -7674,7 +7674,7 @@
  programs which don't rely on that value as an input@footnote{One example of
  a program which uses the value given to @option{--output} as an input is
  ConvertType, this value specifies the type of the output through the value
@@ -292,7 +319,7 @@
  output}.
  
  
-@@ -6754,8 +6754,8 @@
+@@ -8242,8 +8242,8 @@
  property. One such property can be the object's magnitude, which is the sum
  of pixels with that label, or its center can be defined as the
  light-weighted average value of those pixels. Many such properties can be
@@ -303,7 +330,7 @@
  
  As a summary, for each labeled region (or, galaxy) we have one @emph{row}
  and for each measured property we have one @emph{column}. This high-level
-@@ -7819,8 +7819,7 @@
+@@ -9315,8 +9315,7 @@
  whole file (grouping of extensions). Subsequent extensions may contain data
  along with their own separate meta-data. All of Gnuastro's programs also
  follow this convention: the main dataset (image or table) is in the second
@@ -313,7 +340,7 @@
  
  The meta-data contain information about the data, for example which region
  of the sky an image corresponds to, the units of the data, what telescope,
-@@ -7861,10 +7860,10 @@
+@@ -9357,10 +9356,10 @@
  within one HDU.
  
  @menu
@@ -326,7 +353,7 @@
  @subsection Invoking Fits
  
  Fits can print or manipulate the FITS file HDUs (extensions), meta-data
-@@ -7976,7 +7975,7 @@
+@@ -9472,7 +9471,7 @@
  
  
  
@@ -335,7 +362,7 @@
  @subsubsection HDU manipulation
  Each header data unit, or HDU (also known as an extension), in a FITS file
  is an independent dataset (data + meta-data). Multiple HDUs can be stored
-@@ -8024,7 +8023,7 @@
+@@ -9520,7 +9519,7 @@
  @end table
  
  
@@ -344,7 +371,7 @@
  @subsubsection Keyword manipulation
  The meta-data in each header data unit, or HDU (also known as extension,
  see @ref{Fits}) is stored as ``keyword''s. Each keyword consists of a name,
-@@ -8281,7 +8280,7 @@
+@@ -9777,7 +9776,7 @@
  @menu
  * Recognized file formats::     Recognized file formats
  * Color::                       Some explanations on color.
@@ -353,7 +380,7 @@
  @end menu
  
  @node Recognized file formats, Color, ConvertType, ConvertType
-@@ -8412,7 +8411,7 @@
+@@ -9928,7 +9927,7 @@
  color channel.
  
  In ConvertType, the recognized extensions for plain text files are
@@ -362,7 +389,7 @@
  you just give these extensions, (and not a full filename) as output, then
  automatic output will be preformed to determine the final output name (see
  @ref{Automatic output}). Besides these, when the format of a file cannot be
-@@ -8449,7 +8448,7 @@
+@@ -9965,7 +9964,7 @@
  
  @end table
  
@@ -371,7 +398,7 @@
  @subsection Color
  
  @cindex RGB
-@@ -8522,7 +8521,7 @@
+@@ -10038,7 +10037,7 @@
  are approximately the same file size.
  
  
@@ -380,7 +407,7 @@
  @subsection Invoking ConvertType
  
  ConvertType will convert any recognized input file type to any
-@@ -8801,14 +8800,14 @@
+@@ -10326,14 +10325,14 @@
  formats) is only one command away from AWK (or any other tool you want to
  use). Just like a plain text file that you read with the @command{cat}
  command. You can pipe the output of Table into any other tool for
@@ -398,7 +425,7 @@
  @subsection Invoking Table
  
  Table will read/write, select, convert, or show the information of the
-@@ -8975,7 +8974,7 @@
+@@ -10509,7 +10508,7 @@
  Besides cropping postage stamps around certain coordinates, Crop can also
  crop arbitrary polygons from an image (or a set of tiles by stitching the
  relevant parts of different tiles within the polygon), see
@@ -407,7 +434,7 @@
  out rectangular regions through the @option{--section} option from one
  image, see @ref{Crop section syntax}.
  
-@@ -8983,7 +8982,7 @@
+@@ -10517,7 +10516,7 @@
  * Crop modes::                  Basic modes to define crop region.
  * Crop section syntax::         How to define a section to crop.
  * Blank pixels::                Pixels with no value.
@@ -416,16 +443,16 @@
  @end menu
  
  @node Crop modes, Crop section syntax, Crop, Crop
-@@ -9010,7 +9009,7 @@
+@@ -10544,7 +10543,7 @@
  the @emph{mode} in Crop, you define the standard that the given coordinates
- must be interpretted. Here, the different ways to specify the crop region
+ must be interpreted. Here, the different ways to specify the crop region
  are discussed within each standard. For the full list options, please see
 -@ref{Invoking astcrop}.
 +@ref{astcrop}.
  
  When the crop is defined by its center, the respective (integer) central
  pixel position will be found internally according to the FITS standard. To
-@@ -9023,8 +9022,7 @@
+@@ -10557,8 +10556,7 @@
  center (your primary target). This can be very convenient when your input
  catalog/coordinates originated from another survey/filter which is not
  fully covered by your input image, to learn more about this feature, please
@@ -435,7 +462,7 @@
  
  @table @asis
  @item Image coordinates
-@@ -9059,7 +9057,7 @@
+@@ -10593,7 +10591,7 @@
  
  The latter option (@option{--polygon}) is a higher-level method to define
  any convex polygon (with any number of vertices) with floating point
@@ -444,7 +471,7 @@
  for its syntax.
  @end table
  
-@@ -9105,7 +9103,7 @@
+@@ -10639,7 +10637,7 @@
  @item Vertices of a single crop
  The @option{--polygon} option is a high-level method to define any convex
  polygon (with any number of vertices). Please see the description of this
@@ -453,7 +480,7 @@
  @end table
  
  @cartouche
-@@ -9182,7 +9180,7 @@
+@@ -10716,7 +10714,7 @@
  the command-line works.
  
  
@@ -462,7 +489,7 @@
  @subsection Blank pixels
  
  @cindex Blank pixel
-@@ -9218,7 +9216,7 @@
+@@ -10752,7 +10750,7 @@
  @option{--zeroisnotblank} option.
  
  
@@ -471,7 +498,7 @@
  @subsection Invoking Crop
  
  Crop will crop a region from an image. If in WCS mode, it will also
-@@ -9295,7 +9293,7 @@
+@@ -10829,7 +10827,7 @@
  * Crop output::                 The outputs of Crop.
  @end menu
  
@@ -480,7 +507,7 @@
  @subsubsection Crop options
  
  The options can be classified into the following contexts: Input,
-@@ -9563,7 +9561,7 @@
+@@ -11105,7 +11103,7 @@
  
  
  
@@ -488,8 +515,8 @@
 +@node Crop output,  , Crop options, astcrop
  @subsubsection Crop output
  
- The string given to @option{--output} option will be interpretted depending
-@@ -9617,7 +9615,7 @@
+ The string given to @option{--output} option will be interpreted depending
+@@ -11159,7 +11157,7 @@
  A @code{0} if the central few pixels (value to the @option{--checkcenter}
  option) are blank and @code{1} if they aren't. When the crop was not
  defined by its center (see @ref{Crop modes}), or @option{--checkcenter} was
@@ -498,7 +525,7 @@
  checked and this column will be given a value of @code{-1}.
  @end enumerate
  
-@@ -9654,13 +9652,13 @@
+@@ -11196,13 +11194,13 @@
  polish or post-fix notation, see @ref{Reverse polish notation} and will work
  on the native data types of the input images/data to reduce CPU and RAM
  resources, see @ref{Numeric data types}. For more information on how to run
@@ -514,7 +541,7 @@
  @end menu
  
  @node Reverse polish notation, Arithmetic operators, Arithmetic, Arithmetic
-@@ -9724,7 +9722,7 @@
+@@ -11266,7 +11264,7 @@
  
  
  
@@ -523,7 +550,7 @@
  @subsection Arithmetic operators
  
  The recognized operators in Arithmetic are listed below. See @ref{Reverse
-@@ -10148,7 +10146,7 @@
+@@ -11922,7 +11920,7 @@
  @end cartouche
  
  
@@ -532,7 +559,7 @@
  @subsection Invoking Arithmetic
  
  Arithmetic will do pixel to pixel arithmetic operations on the individual
-@@ -10339,7 +10337,7 @@
+@@ -12113,7 +12111,7 @@
  On an image, convolution can be thought of as a process to blur or remove
  the contrast in an image. If you are already familiar with the concept and
  just want to run Convolve, you can jump to @ref{Convolution kernel} and
@@ -541,7 +568,7 @@
  definitions and concepts of convolution.
  
  There are generally two methods to convolve an image. The first and
-@@ -10389,7 +10387,7 @@
+@@ -12163,7 +12161,7 @@
  * Frequency domain and Fourier operations::  Using frequencies in input.
  * Spatial vs. Frequency domain::  When to use which?
  * Convolution kernel::          How to specify the convolution kernel.
@@ -550,7 +577,7 @@
  @end menu
  
  @node Spatial domain convolution, Frequency domain and Fourier operations, Convolve, Convolve
-@@ -11477,7 +11475,7 @@
+@@ -13258,7 +13256,7 @@
  frequency domain convolution will significantly improve the processing
  time, see @ref{Oversampling}.
  
@@ -559,7 +586,7 @@
  @subsection Convolution kernel
  
  All the programs that need convolution will need to be given a
-@@ -11504,7 +11502,7 @@
+@@ -13285,7 +13283,7 @@
  process}. All the programs that do convolution will normalize the
  kernel internally, so if you choose this option, you don't have to
  worry about normalizing the kernel. Only within Convolve, there is an
@@ -568,7 +595,7 @@
  
  @end itemize
  
-@@ -11549,7 +11547,7 @@
+@@ -13330,7 +13328,7 @@
  @end table
  
  
@@ -577,7 +604,7 @@
  @subsection Invoking Convolve
  
  Convolve an input image with a known kernel or make the kernel necessary to
-@@ -11806,7 +11804,7 @@
+@@ -13587,7 +13585,7 @@
  * Warping basics::              Basics of coordinate transformation.
  * Merging multiple warpings::   How to merge multiple matrices.
  * Resampling::                  Warping an image is re-sampling it.
@@ -586,7 +613,7 @@
  @end menu
  
  @node Warping basics, Merging multiple warpings, Warp, Warp
-@@ -11996,7 +11994,7 @@
+@@ -13777,7 +13775,7 @@
  
  
  
@@ -595,7 +622,7 @@
  @subsection Resampling
  
  @cindex Pixel
-@@ -12090,7 +12088,7 @@
+@@ -13871,7 +13869,7 @@
  applications, see @ref{PSF}.
  
  
@@ -604,7 +631,7 @@
  @subsection Invoking Warp
  
  Warp an input dataset into a new grid. Any homographic warp (for example
-@@ -12282,11 +12280,11 @@
+@@ -14063,11 +14061,11 @@
  
  @item --hstartwcs=INT
  Specify the first header keyword number (line) that should be used to read
@@ -618,7 +645,7 @@
  
  @item -k
  @itemx --keepwcs
-@@ -12375,7 +12373,7 @@
+@@ -14157,7 +14155,7 @@
  * Histogram and Cumulative Frequency Plot::  Basic definitions.
  * Sigma clipping::              Definition of @mymath{\sigma}-clipping.
  * Sky value::                   Definition and derivation of the Sky value.
@@ -627,7 +654,7 @@
  @end menu
  
  
-@@ -12398,7 +12396,7 @@
+@@ -14180,7 +14178,7 @@
  directly within @TeX{} (the same tool that generates your document).}, or
  it can be shown with ASCII characters on the command-line, which is very
  crude, but good enough for a fast and on-the-go analysis, see the example
@@ -636,7 +663,7 @@
  
  @cindex Intervals, histogram
  @cindex Bin width, histogram
-@@ -12437,8 +12435,8 @@
+@@ -14219,8 +14217,8 @@
  Statistics program), the number reported for each bin is the total number
  of data points until the larger interval value for that bin. You can see an
  example histogram and cumulative frequency plot of a single dataset under
@@ -647,7 +674,7 @@
  
  So as a summary, both the histogram and cumulative frequency plot in
  Statistics will work with bins. Within each bin/interval, the lower value
-@@ -12550,7 +12548,7 @@
+@@ -14332,7 +14330,7 @@
  
  
  
@@ -656,7 +683,7 @@
  @subsection Sky value
  
  @cindex Sky
-@@ -12829,7 +12827,7 @@
+@@ -14611,7 +14609,7 @@
  
  
  
@@ -665,10 +692,30 @@
  @subsection Invoking Statistics
  
  Statistics will print statistical measures of an input dataset (table
-@@ -13446,10 +13444,10 @@
+@@ -15294,8 +15292,8 @@
+ a more complete introduction to NoiseChisel in this book. However,
+ published papers cannot be updated any more, but the software has
+ evolved/changed. The changes since publication are documented in
+-@ref{NoiseChisel changes after publication}. Afterwards, in @ref{Invoking
+-astnoisechisel}, the details of running NoiseChisel and its options are
++@ref{NoiseChisel changes after publication}. Afterwards, in @ref{astnoisechisel},
++the details of running NoiseChisel and its options are
+ discussed.
+ 
+ As discussed above, detection is one of the most important steps for your
+@@ -15304,7 +15302,7 @@
+ @ref{MakeCatalog}). We thus strongly recommend that after reading the
+ papers above and the respective sections of Gnuastro's book, you play a
+ little with the settings (in the order presented in the paper and
+-@ref{Invoking astnoisechisel}) on a dataset you are familiar with and
++@ref{astnoisechisel}) on a dataset you are familiar with and
+ inspect all the check images (options starting with @option{--check}) to
+ see the effect of each parameter.
+ 
+@@ -15331,10 +15329,10 @@
  
  @menu
- * NoiseChisel changes after publication::  Changes to the software after publication.
+ * NoiseChisel changes after publication::  NoiseChisel updates after paper's publication.
 -* Invoking astnoisechisel::     Options and arguments for NoiseChisel.
 +* astnoisechisel::              Options and arguments for NoiseChisel.
  @end menu
@@ -677,71 +724,111 @@
 +@node NoiseChisel changes after publication, astnoisechisel, NoiseChisel, NoiseChisel
  @subsection NoiseChisel changes after publication
  
- Before using NoiseChisel it is strongly recommended to read
-@@ -13457,7 +13455,7 @@
- gain a good understanding of what it does and how each parameter influences
- the output. Thanks to that paper, there is no need to go into the details
- of the major processing steps. Hence we can just dive into the details of
--running NoiseChisel in @ref{Invoking astnoisechisel}.
-+running NoiseChisel in @ref{astnoisechisel}.
- 
- However, the paper cannot undergo any further updates, but NoiseChisel will
- evolve: better algorithms or steps will be found, thus options will be
-@@ -13549,7 +13547,7 @@
- 
+ NoiseChisel was initially introduced in
+@@ -15448,7 +15446,7 @@
  @end itemize
+ 
  
 -@node Invoking astnoisechisel,  , NoiseChisel changes after publication, NoiseChisel
 +@node astnoisechisel,  , NoiseChisel changes after publication, NoiseChisel
  @subsection Invoking NoiseChisel
  
- NoiseChisel will detect and segment signal in noise producing a
-@@ -13651,7 +13649,7 @@
- * NoiseChisel output::          NoiseChisel's output format.
+ NoiseChisel will detect signal in noise producing a multi-extension dataset
+@@ -15566,7 +15564,7 @@
+ * NoiseChisel output::          NoiseChisel's output options and format.
  @end menu
  
--@node General NoiseChisel options, Detection options, Invoking astnoisechisel, Invoking astnoisechisel
-+@node General NoiseChisel options, Detection options, astnoisechisel, astnoisechisel
- @subsubsection General NoiseChisel options
+-@node NoiseChisel input, Detection options, Invoking astnoisechisel, Invoking astnoisechisel
++@node NoiseChisel input, Detection options, astnoisechisel, astnoisechisel
+ @subsubsection NoiseChisel input
  
- The options discussed in this section are mainly regarding the input(s),
-@@ -13834,7 +13832,7 @@
- catalog). You can then run MakeCatalog on A normally, see
- @ref{MakeCatalog}. To run MakeCatalog on B, you simply set the object and
- clump labels images to those that NoiseChisel produced for A, see
--@ref{Invoking astmkcatalog}.
-+@ref{astmkcatalog}.
- 
- @item --continueaftercheck
- Continue NoiseChisel after any of the options starting with
-@@ -13853,7 +13851,7 @@
- 
+ The options here can be used to configure the inputs and output of
+@@ -15706,7 +15704,7 @@
+ that is discussed in that section.
  @end table
  
--@node Detection options, Segmentation options, General NoiseChisel options, Invoking astnoisechisel
-+@node Detection options, Segmentation options, General NoiseChisel options, astnoisechisel
+-@node Detection options, NoiseChisel output, NoiseChisel input, Invoking astnoisechisel
++@node Detection options, NoiseChisel output, NoiseChisel input, astnoisechisel
  @subsubsection Detection options
  
  Detection is the process of separating the pixels in the image into two
-@@ -14163,7 +14161,7 @@
- @end table
+@@ -16056,7 +16054,7 @@
  
  
--@node Segmentation options, NoiseChisel output, Detection options, Invoking astnoisechisel
-+@node Segmentation options, NoiseChisel output, Detection options, astnoisechisel
- @subsubsection Segmentation options
  
- Segmentation is the process of (possibly) breaking up a detection into
-@@ -14294,7 +14292,7 @@
- @end table
- 
- 
--@node NoiseChisel output,  , Segmentation options, Invoking astnoisechisel
-+@node NoiseChisel output,  , Segmentation options, astnoisechisel
+-@node NoiseChisel output,  , Detection options, Invoking astnoisechisel
++@node NoiseChisel output,  , Detection options, astnoisechisel
  @subsubsection NoiseChisel output
  
- The default name and directory of the outputs are explained in
-@@ -14442,7 +14440,7 @@
+ NoiseChisel's output is a multi-extension FITS file. The main
+@@ -16314,16 +16312,16 @@
+ those papers were published). Therefore this book is the definitive
+ reference. To help in the transition from those papers to the software you
+ are using, see @ref{Segment changes after publication}. Finally, in
+-@ref{Invoking astsegment}, we'll discuss Segment's inputs, outputs and
++@ref{astsegment}, we'll discuss Segment's inputs, outputs and
+ configuration options.
+ 
+ 
+ @menu
+ * Segment changes after publication::  Segment updates after paper's publication.
+-* Invoking astsegment::         Inputs, outputs and options to Segment
++* astsegment::                  Inputs, outputs and options to Segment
+ @end menu
+ 
+-@node Segment changes after publication, Invoking astsegment, Segment, Segment
++@node Segment changes after publication, astsegment, Segment, Segment
+ @subsection Segment changes after publication
+ 
+ Segment's main algorithm and working strategy were initially defined and
+@@ -16418,7 +16416,7 @@
+ @end itemize
+ 
+ 
+-@node Invoking astsegment,  , Segment changes after publication, Segment
++@node astsegment,  , Segment changes after publication, Segment
+ @subsection Invoking Segment
+ 
+ Segment will identify substructure within the detected regions of an input
+@@ -16484,7 +16482,7 @@
+ * Segment output::              Outputs of Segment
+ @end menu
+ 
+-@node Segment input, Segmentation options, Invoking astsegment, Invoking astsegment
++@node Segment input, Segmentation options, astsegment, astsegment
+ @subsubsection Segment input
+ 
+ Besides the input dataset (for example astronomical image), Segment also
+@@ -16692,7 +16690,7 @@
+ @end table
+ 
+ 
+-@node Segmentation options, Segment output, Segment input, Invoking astsegment
++@node Segmentation options, Segment output, Segment input, astsegment
+ @subsubsection Segmentation options
+ 
+ The options below can be used to configure every step of the segmentation
+@@ -16852,7 +16850,7 @@
+ 
+ @end table
+ 
+-@node Segment output,  , Segmentation options, Invoking astsegment
++@node Segment output,  , Segmentation options, astsegment
+ @subsubsection Segment output
+ 
+ The main output of Segment are two label datasets (with integer types,
+@@ -17034,8 +17032,8 @@
+ will be ignored by MakeCatalog. In other words, the number of rows in
+ MakeCatalog's output is already known before running it.
+ 
+-Before getting into the details of running MakeCatalog (in @ref{Invoking
+-astmkcatalog}, we'll start with a discussion on the basics of its approach
++Before getting into the details of running MakeCatalog (in @ref{astmkcatalog},
++we'll start with a discussion on the basics of its approach
+ to separating detection from measurements in @ref{Detection and catalog
+ production}. A very important factor in any measurement is understanding
+ its validity range, or limits. Therefore in @ref{Quantifying measurement
+@@ -17052,7 +17050,7 @@
  * Quantifying measurement limits::  For comparing different catalogs.
  * Measuring elliptical parameters::  Estimating elliptical parameters.
  * Adding new columns to MakeCatalog::  How to add new columns.
@@ -750,7 +837,7 @@
  @end menu
  
  @node Detection and catalog production, Quantifying measurement limits, MakeCatalog, MakeCatalog
-@@ -14920,7 +14918,7 @@
+@@ -17549,7 +17547,7 @@
  
  
  
@@ -759,7 +846,7 @@
  @subsection Adding new columns to MakeCatalog
  
  MakeCatalog is designed to allow easy addition of different measurements
-@@ -14948,7 +14946,7 @@
+@@ -17577,7 +17575,7 @@
  in @file{main.h} (hopefully the comments in the code are clear enough).
  
  In all these different places, the final columns are sorted in the same
@@ -768,7 +855,7 @@
  column/option to be easily found in all steps. Therefore in adding your new
  option, be sure to keep it in the same relative place in the list in all
  the separate places (it doesn't necessarily have to be in the end), and
-@@ -15012,7 +15010,7 @@
+@@ -17647,7 +17645,7 @@
  
  
  
@@ -776,62 +863,53 @@
 +@node astmkcatalog,  , Adding new columns to MakeCatalog, MakeCatalog
  @subsection Invoking MakeCatalog
  
- MakeCatalog will make a catalog from an input image and at least on labeled
-@@ -15113,7 +15111,7 @@
- * MakeCatalog output columns::  How to specify the columns in the output.
+ MakeCatalog will do measurements and produce a catalog from a labeled
+@@ -17709,7 +17707,7 @@
+ * MakeCatalog output file::     File names of MakeCatalog's output table.
  @end menu
  
--@node MakeCatalog input files, MakeCatalog general settings, Invoking astmkcatalog, Invoking astmkcatalog
-+@node MakeCatalog input files, MakeCatalog general settings, astmkcatalog, astmkcatalog
- @subsubsection MakeCatalog input files
+-@node MakeCatalog inputs and basic settings, Upper-limit settings, Invoking astmkcatalog, Invoking astmkcatalog
++@node MakeCatalog inputs and basic settings, Upper-limit settings, astmkcatalog, astmkcatalog
+ @subsubsection MakeCatalog inputs and basic settings
  
- MakeCatalog needs multiple images as input: a values image, one (or two)
-@@ -15121,7 +15119,7 @@
- described in this section allow you to identify them. If you use the
- default output of NoiseChisel (see @ref{NoiseChisel output}) you don't have
- to worry about any of these options and just give NoiseChisel's output file
--to MakeCatalog as described in @ref{Invoking astmkcatalog}.
-+to MakeCatalog as described in @ref{astmkcatalog}.
- 
- @table @option
- 
-@@ -15138,7 +15136,7 @@
- than zero will be used. If this extension contains the @code{WCLUMPS}
- keyword with a value of @code{yes}, @code{1}, or @code{y} (not case
- sensitive), then MakeCatalog will also build a clumps catalog, see
--@ref{Invoking astmkcatalog}.
-+@ref{astmkcatalog}.
- 
- @item -C STR
- @itemx --clumpsfile=STR
-@@ -15171,7 +15169,7 @@
- 
- 
- 
--@node MakeCatalog general settings, Upper-limit magnitude settings, MakeCatalog input files, Invoking astmkcatalog
-+@node MakeCatalog general settings, Upper-limit magnitude settings, MakeCatalog input files, astmkcatalog
- @subsubsection MakeCatalog general settings
- 
- Some of the columns require particular settings (for example the zero point
-@@ -15236,7 +15234,7 @@
+ MakeCatalog works by using a localized/labeled dataset (see
+@@ -17785,7 +17783,7 @@
+ To summarize: if the input file to MakeCatalog is the default/full output
+ of Segment (see @ref{Segment output}) you don't have to worry about any of
+ the @option{--*file} options below. You can just give Segment's output file
+-to MakeCatalog as described in @ref{Invoking astmkcatalog}. To feed
++to MakeCatalog as described in @ref{astmkcatalog}. To feed
+ NoiseChisel's output into MakeCatalog, just change the labeled dataset's
+ header (with @option{--hdu=DETECTIONS}). The full list of input dataset
+ options and general setting options are described below.
+@@ -17878,7 +17876,7 @@
  @end table
  
  
--@node Upper-limit magnitude settings, MakeCatalog output columns, MakeCatalog general settings, Invoking astmkcatalog
-+@node Upper-limit magnitude settings, MakeCatalog output columns, MakeCatalog general settings, astmkcatalog
- @subsubsection Upper-limit magnitude settings
+-@node Upper-limit settings, MakeCatalog output columns, MakeCatalog inputs and basic settings, Invoking astmkcatalog
++@node Upper-limit settings, MakeCatalog output columns, MakeCatalog inputs and basic settings, astmkcatalog
+ @subsubsection Upper-limit settings
  
- 
-@@ -15346,7 +15344,7 @@
+ The upper-limit magnitude was discussed in @ref{Quantifying measurement
+@@ -18016,7 +18014,7 @@
  @end table
  
  
--@node MakeCatalog output columns,  , Upper-limit magnitude settings, Invoking astmkcatalog
-+@node MakeCatalog output columns,  , Upper-limit magnitude settings, astmkcatalog
+-@node MakeCatalog output columns, MakeCatalog output file, Upper-limit settings, Invoking astmkcatalog
++@node MakeCatalog output columns, MakeCatalog output file, Upper-limit settings, astmkcatalog
  @subsubsection MakeCatalog output columns
  
  The final group of options particular to MakeCatalog are those that specify
-@@ -15650,10 +15648,10 @@
+@@ -18378,7 +18376,7 @@
+ 
+ 
+ 
+-@node MakeCatalog output file,  , MakeCatalog output columns, Invoking astmkcatalog
++@node MakeCatalog output file,  , MakeCatalog output columns, astmkcatalog
+ @subsubsection MakeCatalog output file
+ 
+ When complete, MakeCatalog will store its measurements as a table. If an
+@@ -18481,10 +18479,10 @@
  orientation.
  
  @menu
@@ -844,7 +922,7 @@
  @subsection Invoking Match
  
  When given two catalogs, Match finds the rows that are nearest to each
-@@ -15932,7 +15930,7 @@
+@@ -18774,7 +18772,7 @@
  * If convolving afterwards::    Considerations for convolving later.
  * Flux Brightness and magnitude::  About these measures of energy.
  * Profile magnitude::           Definition of total profile magnitude.
@@ -853,7 +931,7 @@
  @end menu
  
  
-@@ -16343,7 +16341,7 @@
+@@ -19184,7 +19182,7 @@
  also remove all discrete Fourier transform artifacts (blurred sides) from
  the final image. To facilitate this shift, MakeProfiles has the options
  @option{--xshift}, @option{--yshift} and @option{--prepforconv}, see
@@ -862,7 +940,7 @@
  
  
  
-@@ -16425,7 +16423,7 @@
+@@ -19266,7 +19264,7 @@
  magnitude.
  
  
@@ -871,7 +949,7 @@
  @subsection Profile magnitude
  
  @cindex Brightness
-@@ -16466,7 +16464,7 @@
+@@ -19307,7 +19305,7 @@
  
  
  
@@ -880,7 +958,7 @@
  @subsection Invoking MakeProfiles
  
  MakeProfiles will make any number of profiles specified in a catalog either
-@@ -16546,7 +16544,7 @@
+@@ -19387,7 +19385,7 @@
  * MakeProfiles log file::       A description of the optional log file.
  @end menu
  
@@ -889,7 +967,7 @@
  @subsubsection MakeProfiles catalog
  The catalog containing information about each profile can be in the FITS
  ASCII, FITS binary, or plain text formats (see @ref{Tables}). Its columns
-@@ -16674,7 +16672,7 @@
+@@ -19521,7 +19519,7 @@
  
  @end table
  
@@ -898,7 +976,7 @@
  @subsubsection MakeProfiles profile settings
  
  The profile parameters that differ between each created profile are
-@@ -16853,7 +16851,7 @@
+@@ -19700,7 +19698,7 @@
  
  @end table
  
@@ -907,7 +985,7 @@
  @subsubsection MakeProfiles output dataset
  MakeProfiles takes an input catalog uses basic properties that are defined
  there to build a dataset, for example a 2D image containing the profiles in
-@@ -17067,7 +17065,7 @@
+@@ -19914,7 +19912,7 @@
  
  @end table
  
@@ -916,7 +994,7 @@
  @subsubsection MakeProfiles log file
  
  Besides the final merged dataset of all the profiles, or the individual
-@@ -17122,16 +17120,16 @@
+@@ -19969,16 +19967,16 @@
  with MakeProfiles, see @ref{MakeProfiles}. Below, the general
  principles and concepts to help understand how noise is quantified is
  discussed.  MakeNoise options and argument are then discussed in
@@ -936,7 +1014,7 @@
  @subsection Noise basics
  
  @cindex Noise
-@@ -17409,7 +17407,7 @@
+@@ -20267,7 +20265,7 @@
  @end cartouche
  
  
@@ -945,7 +1023,7 @@
  @subsection Invoking MakeNoise
  
  MakeNoise will add noise to an existing image. The executable name is
-@@ -17526,7 +17524,7 @@
+@@ -20384,7 +20382,7 @@
  extra-galactic astronomy, cosmological calculations are necessary. In
  Gnuastro, CosmicCalculator is in charge of such calculations. Before
  discussing how CosmicCalculator is called and operates (in
@@ -954,7 +1032,7 @@
  mostly self sufficient review of the basics and the equations used in
  the analysis. In @ref{Distance on a 2D curved space} the basic idea of
  understanding distances in a curved and expanding 2D universe (which
-@@ -17543,7 +17541,7 @@
+@@ -20401,7 +20399,7 @@
  @menu
  * Distance on a 2D curved space::  Distances in 2D for simplicity
  * Extending distance concepts to 3D::  Going to 3D (our real universe).
@@ -963,7 +1041,7 @@
  @end menu
  
  @node Distance on a 2D curved space, Extending distance concepts to 3D, CosmicCalculator, CosmicCalculator
-@@ -17779,7 +17777,7 @@
+@@ -20637,7 +20635,7 @@
  @dispmath{ds^2=c^2dt^2-a^2(t)ds_s^2 = c^2dt^2-a^2(t)(d\chi^2+r^2d\phi^2).}
  
  
@@ -972,7 +1050,7 @@
  @subsection Extending distance concepts to 3D
  
  The concepts of @ref{Distance on a 2D curved space} are here extended to a
-@@ -17836,7 +17834,7 @@
+@@ -20694,7 +20692,7 @@
  
  
  
@@ -981,7 +1059,7 @@
  @subsection Invoking CosmicCalculator
  
  CosmicCalculator will calculate cosmological variables based on the
-@@ -17888,7 +17886,7 @@
+@@ -20746,7 +20744,7 @@
  * CosmicCalculator specific calculations::  Requesting specific outputs.
  @end menu
  
@@ -990,7 +1068,7 @@
  @subsubsection CosmicCalculator input options
  
  The inputs to CosmicCalculator can be specified with the following options:
-@@ -17920,11 +17918,11 @@
+@@ -20778,11 +20776,11 @@
  
  
  
@@ -1004,7 +1082,7 @@
  calculations can be useful when you don't want any specific value, but just
  a general view. In other contexts (for example in a batch script or during
  a discussion), you know exactly what you want and don't want to be
-@@ -18680,10 +18678,10 @@
+@@ -21586,10 +21584,10 @@
  @end cartouche
  
  @menu
