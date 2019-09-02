@@ -5,21 +5,20 @@
 Summary:	GNU Astronomy Utilities
 Summary(pl.UTF-8):	Narzędzia astronomiczne GNU
 Name:		gnuastro
-Version:	0.8
-Release:	2
+Version:	0.10
+Release:	1
 License:	GPL v3+
 Group:		Applications/Science
 Source0:	https://ftp.gnu.org/gnu/gnuastro/%{name}-%{version}.tar.lz
-# Source0-md5:	cd341c3f6a8928602d5d4f0046e62b23
+# Source0-md5:	48d1081543ba19b5d1b59e6d29b3b349
 Patch0:		%{name}-info.patch
-Patch1:		%{name}-sh.patch
 URL:		http://www.gnu.org/software/gnuastro/
 BuildRequires:	autoconf >= 2.69
 BuildRequires:	automake
 BuildRequires:	cfitsio-devel
 BuildRequires:	curl-devel
 BuildRequires:	ghostscript >= 9.10
-BuildRequires:	gsl-devel
+BuildRequires:	gsl-devel >= 2.0
 BuildRequires:	help2man
 BuildRequires:	libgit2-devel
 BuildRequires:	libjpeg-devel
@@ -78,7 +77,6 @@ Statyczna biblioteka Gnuastro.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
 
 %build
 # regenerate for as-needed to work
@@ -129,12 +127,13 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/astmknoise
 %attr(755,root,root) %{_bindir}/astmkprof
 %attr(755,root,root) %{_bindir}/astnoisechisel
+%attr(755,root,root) %{_bindir}/astscript-sort-by-night
 %attr(755,root,root) %{_bindir}/astsegment
 %attr(755,root,root) %{_bindir}/aststatistics
 %attr(755,root,root) %{_bindir}/asttable
 %attr(755,root,root) %{_bindir}/astwarp
 %attr(755,root,root) %{_libdir}/libgnuastro.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libgnuastro.so.6
+%attr(755,root,root) %ghost %{_libdir}/libgnuastro.so.8
 %dir %{_sysconfdir}/gnuastro
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/gnuastro/ast*.conf
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/gnuastro/gnuastro.conf
@@ -152,6 +151,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/astmknoise.1*
 %{_mandir}/man1/astmkprof.1*
 %{_mandir}/man1/astnoisechisel.1*
+%{_mandir}/man1/astscript-sort-by-night.1*
 %{_mandir}/man1/astsegment.1*
 %{_mandir}/man1/aststatistics.1*
 %{_mandir}/man1/asttable.1*
