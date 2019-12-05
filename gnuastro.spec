@@ -5,12 +5,12 @@
 Summary:	GNU Astronomy Utilities
 Summary(pl.UTF-8):	Narzędzia astronomiczne GNU
 Name:		gnuastro
-Version:	0.10
-Release:	2
+Version:	0.11
+Release:	1
 License:	GPL v3+
 Group:		Applications/Science
 Source0:	https://ftp.gnu.org/gnu/gnuastro/%{name}-%{version}.tar.lz
-# Source0-md5:	48d1081543ba19b5d1b59e6d29b3b349
+# Source0-md5:	5fcb6f89710d9047dabeaec6fe054b43
 Patch0:		%{name}-info.patch
 URL:		http://www.gnu.org/software/gnuastro/
 BuildRequires:	autoconf >= 2.69
@@ -27,6 +27,7 @@ BuildRequires:	libtool >= 2:2
 BuildRequires:	lzip
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	wcslib-devel
+BuildRequires:	xz-devel
 Suggests:	ghostscript >= 9.10
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -54,7 +55,10 @@ Requires:	%{name} = %{version}-%{release}
 Requires:	cfitsio-devel
 Requires:	gsl-devel
 Requires:	libgit2-devel
+Requires:	libjpeg-devel
+Requires:	libtiff-devel >= 4
 Requires:	wcslib-devel
+Requires:	xz-devel
 
 %description devel
 Header files for Gnuastro library.
@@ -133,7 +137,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/asttable
 %attr(755,root,root) %{_bindir}/astwarp
 %attr(755,root,root) %{_libdir}/libgnuastro.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libgnuastro.so.8
+%attr(755,root,root) %ghost %{_libdir}/libgnuastro.so.9
 %dir %{_sysconfdir}/gnuastro
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/gnuastro/ast*.conf
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/gnuastro/gnuastro.conf
