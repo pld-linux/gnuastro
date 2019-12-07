@@ -91,7 +91,7 @@ Statyczna biblioteka Gnuastro.
 %{__automake}
 %configure \
 	--sysconfdir=%{_sysconfdir}/gnuastro \
-	%{!?with_static_libs:--disable-static}
+	%{!?with_static_libs:--disable-static} || { cat config.log ; head bootstrapped/m4/lib-link.m4 }
 %{__make}
 
 %install
