@@ -12,6 +12,7 @@ Group:		Applications/Science
 Source0:	https://ftp.gnu.org/gnu/gnuastro/%{name}-%{version}.tar.lz
 # Source0-md5:	5fcb6f89710d9047dabeaec6fe054b43
 Patch0:		%{name}-info.patch
+Patch1:		ac.patch
 URL:		http://www.gnu.org/software/gnuastro/
 BuildRequires:	autoconf >= 2.69
 BuildRequires:	automake
@@ -81,6 +82,7 @@ Statyczna biblioteka Gnuastro.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 # regenerate for as-needed to work

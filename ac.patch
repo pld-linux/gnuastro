@@ -1,0 +1,92 @@
+--- gnuastro-0.11/bootstrapped/m4/lib-link.m4~	2019-11-25 15:44:53.000000000 +0100
++++ gnuastro-0.11/bootstrapped/m4/lib-link.m4	2019-12-14 11:51:26.413058282 +0100
+@@ -285,7 +285,7 @@
+                   dnl The same code as in the loop below:
+                   dnl First look for a shared library.
+                   if test -n "$acl_shlibext"; then
+-                    if test -f "$dir/$libname$shrext" && acl_is_expected_elfclass < "$dir/$libname$shrext"; then
++                    if test -f "$dir/$libname$shrext" ; then
+                       found_dir="$dir"
+                       found_so="$dir/$libname$shrext"
+                     else
+@@ -295,14 +295,14 @@
+                               | sed -e "s,^$libname$shrext\\\\.,," \
+                               | sort -t '.' -n -r -k1,1 -k2,2 -k3,3 -k4,4 -k5,5 \
+                               | sed 1q ) 2>/dev/null`
+-                        if test -n "$ver" && test -f "$dir/$libname$shrext.$ver" && acl_is_expected_elfclass < "$dir/$libname$shrext.$ver"; then
++                        if test -n "$ver" && test -f "$dir/$libname$shrext.$ver" ; then
+                           found_dir="$dir"
+                           found_so="$dir/$libname$shrext.$ver"
+                         fi
+                       else
+                         eval library_names=\"$acl_library_names_spec\"
+                         for f in $library_names; do
+-                          if test -f "$dir/$f" && acl_is_expected_elfclass < "$dir/$f"; then
++                          if test -f "$dir/$f" ; then
+                             found_dir="$dir"
+                             found_so="$dir/$f"
+                             break
+@@ -313,7 +313,7 @@
+                   fi
+                   dnl Then look for a static library.
+                   if test "X$found_dir" = "X"; then
+-                    if test -f "$dir/$libname.$acl_libext" && ${AR-ar} -p "$dir/$libname.$acl_libext" | acl_is_expected_elfclass; then
++                    if test -f "$dir/$libname.$acl_libext" ; then
+                       found_dir="$dir"
+                       found_a="$dir/$libname.$acl_libext"
+                     fi
+@@ -335,7 +335,7 @@
+                   dir=`echo "X$x" | sed -e 's/^X-L//'`
+                   dnl First look for a shared library.
+                   if test -n "$acl_shlibext"; then
+-                    if test -f "$dir/$libname$shrext" && acl_is_expected_elfclass < "$dir/$libname$shrext"; then
++                    if test -f "$dir/$libname$shrext" ; then
+                       found_dir="$dir"
+                       found_so="$dir/$libname$shrext"
+                     else
+@@ -345,14 +345,14 @@
+                               | sed -e "s,^$libname$shrext\\\\.,," \
+                               | sort -t '.' -n -r -k1,1 -k2,2 -k3,3 -k4,4 -k5,5 \
+                               | sed 1q ) 2>/dev/null`
+-                        if test -n "$ver" && test -f "$dir/$libname$shrext.$ver" && acl_is_expected_elfclass < "$dir/$libname$shrext.$ver"; then
++                        if test -n "$ver" && test -f "$dir/$libname$shrext.$ver" ; then
+                           found_dir="$dir"
+                           found_so="$dir/$libname$shrext.$ver"
+                         fi
+                       else
+                         eval library_names=\"$acl_library_names_spec\"
+                         for f in $library_names; do
+-                          if test -f "$dir/$f" && acl_is_expected_elfclass < "$dir/$f"; then
++                          if test -f "$dir/$f" ; then
+                             found_dir="$dir"
+                             found_so="$dir/$f"
+                             break
+@@ -363,7 +363,7 @@
+                   fi
+                   dnl Then look for a static library.
+                   if test "X$found_dir" = "X"; then
+-                    if test -f "$dir/$libname.$acl_libext" && ${AR-ar} -p "$dir/$libname.$acl_libext" | acl_is_expected_elfclass; then
++                    if test -f "$dir/$libname.$acl_libext" ; then
+                       found_dir="$dir"
+                       found_a="$dir/$libname.$acl_libext"
+                     fi
+--- gnuastro-0.11/bootstrapped/m4/gnulib-comp.m4~	2019-11-25 15:45:05.000000000 +0100
++++ gnuastro-0.11/bootstrapped/m4/gnulib-comp.m4	2019-12-14 11:52:01.243057098 +0100
+@@ -1630,7 +1630,6 @@
+   m4/ldexp.m4
+   m4/lib-ld.m4
+   m4/lib-link.m4
+-  m4/lib-prefix.m4
+   m4/libunistring-base.m4
+   m4/limits-h.m4
+   m4/localcharset.m4
+--- gnuastro-0.11/aclocal.m4~	2019-12-14 11:40:25.000000000 +0100
++++ gnuastro-0.11/aclocal.m4	2019-12-14 11:52:13.989723321 +0100
+@@ -1723,7 +1723,6 @@
+ m4_include([bootstrapped/m4/ldexp.m4])
+ m4_include([bootstrapped/m4/lib-ld.m4])
+ m4_include([bootstrapped/m4/lib-link.m4])
+-m4_include([bootstrapped/m4/lib-prefix.m4])
+ m4_include([bootstrapped/m4/libtool.m4])
+ m4_include([bootstrapped/m4/libunistring-base.m4])
+ m4_include([bootstrapped/m4/limits-h.m4])
