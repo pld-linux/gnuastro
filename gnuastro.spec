@@ -5,12 +5,12 @@
 Summary:	GNU Astronomy Utilities
 Summary(pl.UTF-8):	Narzędzia astronomiczne GNU
 Name:		gnuastro
-Version:	0.11
-Release:	4
+Version:	0.12
+Release:	1
 License:	GPL v3+
 Group:		Applications/Science
 Source0:	https://ftp.gnu.org/gnu/gnuastro/%{name}-%{version}.tar.lz
-# Source0-md5:	5fcb6f89710d9047dabeaec6fe054b43
+# Source0-md5:	07d27c08cf8baae53a523224b4ed9ce5
 Patch0:		%{name}-info.patch
 Patch1:		ac.patch
 URL:		http://www.gnu.org/software/gnuastro/
@@ -139,7 +139,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/asttable
 %attr(755,root,root) %{_bindir}/astwarp
 %attr(755,root,root) %{_libdir}/libgnuastro.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libgnuastro.so.9
+%attr(755,root,root) %ghost %{_libdir}/libgnuastro.so.10
 %dir %{_sysconfdir}/gnuastro
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/gnuastro/ast*.conf
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/gnuastro/gnuastro.conf
