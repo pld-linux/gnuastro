@@ -6,7 +6,7 @@ Summary:	GNU Astronomy Utilities
 Summary(pl.UTF-8):	Narzędzia astronomiczne GNU
 Name:		gnuastro
 Version:	0.13
-Release:	1
+Release:	2
 License:	GPL v3+
 Group:		Applications/Science
 Source0:	https://ftp.gnu.org/gnu/gnuastro/%{name}-%{version}.tar.lz
