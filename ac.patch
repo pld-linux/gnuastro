@@ -1,9 +1,9 @@
---- gnuastro-0.11/bootstrapped/m4/lib-link.m4~	2019-11-25 15:44:53.000000000 +0100
-+++ gnuastro-0.11/bootstrapped/m4/lib-link.m4	2019-12-14 11:51:26.413058282 +0100
+--- gnuastro-0.15/bootstrapped/m4/lib-link.m4.orig	2021-05-30 19:48:34.000000000 +0200
++++ gnuastro-0.15/bootstrapped/m4/lib-link.m4	2021-06-12 17:45:59.958057482 +0200
 @@ -285,7 +285,7 @@
                    dnl The same code as in the loop below:
                    dnl First look for a shared library.
-                   if test -n "$acl_shlibext"; then
+                   if test -n "$acl_shlibext" -a "X$enable_shared" = "Xyes"; then
 -                    if test -f "$dir/$libname$shrext" && acl_is_expected_elfclass < "$dir/$libname$shrext"; then
 +                    if test -f "$dir/$libname$shrext" ; then
                        found_dir="$dir"
@@ -38,7 +38,7 @@
 @@ -335,7 +335,7 @@
                    dir=`echo "X$x" | sed -e 's/^X-L//'`
                    dnl First look for a shared library.
-                   if test -n "$acl_shlibext"; then
+                   if test -n "$acl_shlibext" -a "X$enable_shared" = "Xyes"; then
 -                    if test -f "$dir/$libname$shrext" && acl_is_expected_elfclass < "$dir/$libname$shrext"; then
 +                    if test -f "$dir/$libname$shrext" ; then
                        found_dir="$dir"

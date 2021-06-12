@@ -5,17 +5,18 @@
 Summary:	GNU Astronomy Utilities
 Summary(pl.UTF-8):	Narzędzia astronomiczne GNU
 Name:		gnuastro
-Version:	0.13
+Version:	0.15
 Release:	3
 License:	GPL v3+
 Group:		Applications/Science
 Source0:	https://ftp.gnu.org/gnu/gnuastro/%{name}-%{version}.tar.lz
-# Source0-md5:	cb5073024b5f9180e667561bb6239a6a
+# Source0-md5:	849cbb80ac0ccd165f723576fc71f212
 Patch0:		%{name}-info.patch
 Patch1:		ac.patch
 URL:		http://www.gnu.org/software/gnuastro/
 BuildRequires:	autoconf >= 2.69
 BuildRequires:	automake
+BuildRequires:	bzip2-devel
 BuildRequires:	cfitsio-devel
 BuildRequires:	curl-devel
 BuildRequires:	ghostscript >= 9.10
@@ -26,9 +27,11 @@ BuildRequires:	libjpeg-devel
 BuildRequires:	libtiff-devel
 BuildRequires:	libtool >= 2:2
 BuildRequires:	lzip
+BuildRequires:	rpm-build >= 4.6
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	wcslib-devel
 BuildRequires:	xz-devel
+BuildRequires:	zlib-devel
 Suggests:	ghostscript >= 9.10
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -79,6 +82,20 @@ Static Gnuastro library.
 %description static -l pl.UTF-8
 Statyczna biblioteka Gnuastro.
 
+%package -n bash-completion-gnuastro
+Summary:	Bash completion for gnuastro commands
+Summary(pl.UTF-8):	Bashowe uzupełnianie składni poleceń gnuastro
+Group:		Applications/Shells
+Requires:	%{name} = %{version}-%{release}
+Requires:	bash-completion >= 2.0
+BuildArch:	noarch
+
+%description -n bash-completion-gnuastro
+Bash completion for gnuastro commands.
+
+%description -n bash-completion-gnuastro -l pl.UTF-8
+Bashowe uzupełnianie składni poleceń gnuastro.
+
 %prep
 %setup -q
 %patch0 -p1
@@ -107,6 +124,9 @@ rm -rf $RPM_BUILD_ROOT
 # packaged as %doc
 %{__rm} $RPM_BUILD_ROOT%{_docdir}/gnuastro/README
 
+install -d $RPM_BUILD_ROOT%{bash_compdir}
+%{__mv} $RPM_BUILD_ROOT%{_datadir}/gnuastro/completion.bash $RPM_BUILD_ROOT%{bash_compdir}/gnuastro
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -133,13 +153,16 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/astmknoise
 %attr(755,root,root) %{_bindir}/astmkprof
 %attr(755,root,root) %{_bindir}/astnoisechisel
+%attr(755,root,root) %{_bindir}/astquery
+%attr(755,root,root) %{_bindir}/astscript-ds9-region
+%attr(755,root,root) %{_bindir}/astscript-radial-profile
 %attr(755,root,root) %{_bindir}/astscript-sort-by-night
 %attr(755,root,root) %{_bindir}/astsegment
 %attr(755,root,root) %{_bindir}/aststatistics
 %attr(755,root,root) %{_bindir}/asttable
 %attr(755,root,root) %{_bindir}/astwarp
 %attr(755,root,root) %{_libdir}/libgnuastro.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libgnuastro.so.11
+%attr(755,root,root) %ghost %{_libdir}/libgnuastro.so.13
 %dir %{_sysconfdir}/gnuastro
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/gnuastro/ast*.conf
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/gnuastro/gnuastro.conf
@@ -157,6 +180,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/astmknoise.1*
 %{_mandir}/man1/astmkprof.1*
 %{_mandir}/man1/astnoisechisel.1*
+%{_mandir}/man1/astquery.1*
+%{_mandir}/man1/astscript-ds9-region.1*
+%{_mandir}/man1/astscript-radial-profile.1*
 %{_mandir}/man1/astscript-sort-by-night.1*
 %{_mandir}/man1/astsegment.1*
 %{_mandir}/man1/aststatistics.1*
@@ -174,3 +200,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_libdir}/libgnuastro.a
 %endif
+
+%files -n bash-completion-gnuastro
+%defattr(644,root,root,755)
+%{bash_compdir}/gnuastro
