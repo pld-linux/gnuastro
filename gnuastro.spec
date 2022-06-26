@@ -1,3 +1,6 @@
+# TODO: ds9, topcat (for Suggests)
+#	https://sites.google.com/cfa.harvard.edu/saoimageds9
+#	http://www.star.bris.ac.uk/~mbt/topcat/
 #
 # Conditional build:
 %bcond_without	static_libs	# static library
@@ -5,12 +8,12 @@
 Summary:	GNU Astronomy Utilities
 Summary(pl.UTF-8):	Narzędzia astronomiczne GNU
 Name:		gnuastro
-Version:	0.16
-Release:	2
+Version:	0.17
+Release:	1
 License:	GPL v3+
 Group:		Applications/Science
 Source0:	https://ftp.gnu.org/gnu/gnuastro/%{name}-%{version}.tar.lz
-# Source0-md5:	2685beb70cd4fddfe7ddc903d8ed661a
+# Source0-md5:	dc1a9d0dba6550cc8eded53ecfd7535a
 Patch0:		%{name}-info.patch
 Patch1:		ac.patch
 URL:		http://www.gnu.org/software/gnuastro/
@@ -155,6 +158,12 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/astnoisechisel
 %attr(755,root,root) %{_bindir}/astquery
 %attr(755,root,root) %{_bindir}/astscript-ds9-region
+%attr(755,root,root) %{_bindir}/astscript-fits-view
+%attr(755,root,root) %{_bindir}/astscript-psf-scale-factor
+%attr(755,root,root) %{_bindir}/astscript-psf-select-stars
+%attr(755,root,root) %{_bindir}/astscript-psf-stamp
+%attr(755,root,root) %{_bindir}/astscript-psf-subtract
+%attr(755,root,root) %{_bindir}/astscript-psf-unite
 %attr(755,root,root) %{_bindir}/astscript-radial-profile
 %attr(755,root,root) %{_bindir}/astscript-sort-by-night
 %attr(755,root,root) %{_bindir}/astsegment
@@ -162,10 +171,11 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/asttable
 %attr(755,root,root) %{_bindir}/astwarp
 %attr(755,root,root) %{_libdir}/libgnuastro.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libgnuastro.so.14
+%attr(755,root,root) %ghost %{_libdir}/libgnuastro.so.15
 %dir %{_sysconfdir}/gnuastro
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/gnuastro/ast*.conf
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/gnuastro/gnuastro.conf
+%{_datadir}/gnuastro
 %{_infodir}/gnuastro.info*
 %{_infodir}/gnuastro-figures
 %{_mandir}/man1/astarithmetic.1*
@@ -182,6 +192,12 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/astnoisechisel.1*
 %{_mandir}/man1/astquery.1*
 %{_mandir}/man1/astscript-ds9-region.1*
+%{_mandir}/man1/astscript-fits-view.1*
+%{_mandir}/man1/astscript-psf-scale-factor.1*
+%{_mandir}/man1/astscript-psf-select-stars.1*
+%{_mandir}/man1/astscript-psf-stamp.1*
+%{_mandir}/man1/astscript-psf-subtract.1*
+%{_mandir}/man1/astscript-psf-unite.1*
 %{_mandir}/man1/astscript-radial-profile.1*
 %{_mandir}/man1/astscript-sort-by-night.1*
 %{_mandir}/man1/astsegment.1*
