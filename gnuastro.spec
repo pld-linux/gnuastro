@@ -16,6 +16,7 @@ Source0:	https://ftp.gnu.org/gnu/gnuastro/%{name}-%{version}.tar.lz
 # Source0-md5:	dc1a9d0dba6550cc8eded53ecfd7535a
 Patch0:		%{name}-info.patch
 Patch1:		ac.patch
+Patch2:		%{name}-link.patch
 URL:		http://www.gnu.org/software/gnuastro/
 BuildRequires:	autoconf >= 2.69
 BuildRequires:	automake
@@ -103,6 +104,7 @@ Bashowe uzupełnianie składni poleceń gnuastro.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 # regenerate for as-needed to work
