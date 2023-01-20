@@ -1,14 +1,13 @@
---- gnuastro-0.17/lib/Makefile.am.orig	2022-03-04 00:10:24.000000000 +0100
-+++ gnuastro-0.17/lib/Makefile.am	2022-06-26 22:40:32.216699320 +0200
-@@ -46,9 +46,9 @@ AM_CPPFLAGS = -I\$(top_builddir)/bootstr
- # features. This also avoids the need for the programs to link separately
- # with Gnulib, they only need to link with the Gnuastro library.
- lib_LTLIBRARIES = libgnuastro.la
+--- gnuastro-0.19/lib/Makefile.am.orig	2023-01-19 21:53:09.471630170 +0100
++++ gnuastro-0.19/lib/Makefile.am	2023-01-19 21:56:16.093952483 +0100
+@@ -69,8 +69,8 @@ AM_CPPFLAGS = -I\$(top_builddir)/bootstr
+ lib_LTLIBRARIES = libgnuastro.la $(MAYBE_GNUMAKE)
+ 
+ # Linking flags for the Gnuastro library.
+-libgnuastro_la_LIBADD = $(top_builddir)/bootstrapped/lib/libgnu.la
 -libgnuastro_la_LDFLAGS = -version-info $(GAL_LT_VERSION) $(CONFIG_LDADD) \
++libgnuastro_la_LIBADD = $(top_builddir)/bootstrapped/lib/libgnu.la $(CONFIG_LDADD)
 +libgnuastro_la_LDFLAGS = -version-info $(GAL_LT_VERSION) \
                           -lc -no-undefined
--libgnuastro_la_LIBADD = $(top_builddir)/bootstrapped/lib/libgnu.la
-+libgnuastro_la_LIBADD = $(top_builddir)/bootstrapped/lib/libgnu.la $(CONFIG_LDADD)
  
- 
- 
+ # Gnuastro's GNU Make extensions

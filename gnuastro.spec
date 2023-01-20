@@ -8,15 +8,16 @@
 Summary:	GNU Astronomy Utilities
 Summary(pl.UTF-8):	Narzędzia astronomiczne GNU
 Name:		gnuastro
-Version:	0.17
+Version:	0.19
 Release:	1
 License:	GPL v3+
 Group:		Applications/Science
 Source0:	https://ftp.gnu.org/gnu/gnuastro/%{name}-%{version}.tar.lz
-# Source0-md5:	dc1a9d0dba6550cc8eded53ecfd7535a
+# Source0-md5:	8b65b9bfd1541a7f47e039e5ba62af21
 Patch0:		%{name}-info.patch
 Patch1:		ac.patch
 Patch2:		%{name}-link.patch
+Patch3:		%{name}-numpy.patch
 URL:		http://www.gnu.org/software/gnuastro/
 BuildRequires:	autoconf >= 2.69
 BuildRequires:	automake
@@ -31,6 +32,8 @@ BuildRequires:	libjpeg-devel
 BuildRequires:	libtiff-devel
 BuildRequires:	libtool >= 2:2
 BuildRequires:	lzip
+BuildRequires:	python3 >= 1:3.2
+BuildRequires:	python3-numpy-devel
 BuildRequires:	rpm-build >= 4.6
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	wcslib-devel
@@ -105,6 +108,7 @@ Bashowe uzupełnianie składni poleceń gnuastro.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 %build
 # regenerate for as-needed to work
@@ -173,7 +177,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/asttable
 %attr(755,root,root) %{_bindir}/astwarp
 %attr(755,root,root) %{_libdir}/libgnuastro.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libgnuastro.so.15
+%attr(755,root,root) %ghost %{_libdir}/libgnuastro.so.17
 %dir %{_sysconfdir}/gnuastro
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/gnuastro/ast*.conf
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/gnuastro/gnuastro.conf

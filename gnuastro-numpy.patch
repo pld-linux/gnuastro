@@ -1,0 +1,11 @@
+--- gnuastro-0.19/lib/python.c.orig	2022-09-29 19:13:56.000000000 +0200
++++ gnuastro-0.19/lib/python.c	2023-01-19 22:14:37.257986966 +0100
+@@ -91,7 +91,7 @@ gal_python_type_from_numpy(int type)
+     case NPY_INT8:           return GAL_TYPE_INT8;
+     case NPY_INT16:          return GAL_TYPE_INT16;
+     case NPY_INT32:          return GAL_TYPE_INT32;
+-    case NPY_LONG:           return GAL_TYPE_INT64;
++    case NPY_INT64:          return GAL_TYPE_INT64;
+     case NPY_UINT8:          return GAL_TYPE_UINT8;
+     case NPY_UINT16:         return GAL_TYPE_UINT16;
+     case NPY_UINT32:         return GAL_TYPE_UINT32;
