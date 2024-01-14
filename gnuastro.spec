@@ -8,12 +8,12 @@
 Summary:	GNU Astronomy Utilities
 Summary(pl.UTF-8):	Narzędzia astronomiczne GNU
 Name:		gnuastro
-Version:	0.19
-Release:	3
+Version:	0.21
+Release:	1
 License:	GPL v3+
 Group:		Applications/Science
 Source0:	https://ftp.gnu.org/gnu/gnuastro/%{name}-%{version}.tar.lz
-# Source0-md5:	8b65b9bfd1541a7f47e039e5ba62af21
+# Source0-md5:	905c9f52dcadbb3832c90da514a8f7f3
 Patch0:		%{name}-info.patch
 Patch1:		ac.patch
 Patch2:		%{name}-link.patch
@@ -22,7 +22,7 @@ URL:		http://www.gnu.org/software/gnuastro/
 BuildRequires:	autoconf >= 2.69
 BuildRequires:	automake
 BuildRequires:	bzip2-devel
-BuildRequires:	cfitsio-devel
+BuildRequires:	cfitsio-devel >= 3.30
 BuildRequires:	curl-devel
 BuildRequires:	ghostscript >= 9.10
 BuildRequires:	gsl-devel >= 2.0
@@ -159,7 +159,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/astfits
 %attr(755,root,root) %{_bindir}/astmatch
 %attr(755,root,root) %{_bindir}/astmkcatalog
-%attr(755,root,root) %{_bindir}/astmknoise
 %attr(755,root,root) %{_bindir}/astmkprof
 %attr(755,root,root) %{_bindir}/astnoisechisel
 %attr(755,root,root) %{_bindir}/astquery
@@ -170,14 +169,16 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/astscript-psf-stamp
 %attr(755,root,root) %{_bindir}/astscript-psf-subtract
 %attr(755,root,root) %{_bindir}/astscript-psf-unite
+%attr(755,root,root) %{_bindir}/astscript-pointing-simulate
 %attr(755,root,root) %{_bindir}/astscript-radial-profile
 %attr(755,root,root) %{_bindir}/astscript-sort-by-night
+%attr(755,root,root) %{_bindir}/astscript-zeropoint
 %attr(755,root,root) %{_bindir}/astsegment
 %attr(755,root,root) %{_bindir}/aststatistics
 %attr(755,root,root) %{_bindir}/asttable
 %attr(755,root,root) %{_bindir}/astwarp
 %attr(755,root,root) %{_libdir}/libgnuastro.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libgnuastro.so.17
+%attr(755,root,root) %ghost %{_libdir}/libgnuastro.so.19
 %dir %{_sysconfdir}/gnuastro
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/gnuastro/ast*.conf
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/gnuastro/gnuastro.conf
@@ -193,12 +194,12 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/astfits.1*
 %{_mandir}/man1/astmatch.1*
 %{_mandir}/man1/astmkcatalog.1*
-%{_mandir}/man1/astmknoise.1*
 %{_mandir}/man1/astmkprof.1*
 %{_mandir}/man1/astnoisechisel.1*
 %{_mandir}/man1/astquery.1*
 %{_mandir}/man1/astscript-ds9-region.1*
 %{_mandir}/man1/astscript-fits-view.1*
+%{_mandir}/man1/astscript-pointing-simulate.1*
 %{_mandir}/man1/astscript-psf-scale-factor.1*
 %{_mandir}/man1/astscript-psf-select-stars.1*
 %{_mandir}/man1/astscript-psf-stamp.1*
@@ -206,6 +207,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/astscript-psf-unite.1*
 %{_mandir}/man1/astscript-radial-profile.1*
 %{_mandir}/man1/astscript-sort-by-night.1*
+%{_mandir}/man1/astscript-zeropoint.1*
 %{_mandir}/man1/astsegment.1*
 %{_mandir}/man1/aststatistics.1*
 %{_mandir}/man1/asttable.1*
