@@ -8,12 +8,12 @@
 Summary:	GNU Astronomy Utilities
 Summary(pl.UTF-8):	Narzędzia astronomiczne GNU
 Name:		gnuastro
-Version:	0.21
+Version:	0.22
 Release:	1
 License:	GPL v3+
 Group:		Applications/Science
 Source0:	https://ftp.gnu.org/gnu/gnuastro/%{name}-%{version}.tar.lz
-# Source0-md5:	905c9f52dcadbb3832c90da514a8f7f3
+# Source0-md5:	c75d19818445f3e6dc0bb121cbd885be
 Patch0:		%{name}-info.patch
 Patch1:		ac.patch
 Patch2:		%{name}-link.patch
@@ -162,6 +162,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/astmkprof
 %attr(755,root,root) %{_bindir}/astnoisechisel
 %attr(755,root,root) %{_bindir}/astquery
+%attr(755,root,root) %{_bindir}/astscript-color-faint-gray
 %attr(755,root,root) %{_bindir}/astscript-ds9-region
 %attr(755,root,root) %{_bindir}/astscript-fits-view
 %attr(755,root,root) %{_bindir}/astscript-psf-scale-factor
@@ -178,7 +179,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/asttable
 %attr(755,root,root) %{_bindir}/astwarp
 %attr(755,root,root) %{_libdir}/libgnuastro.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libgnuastro.so.19
+%attr(755,root,root) %ghost %{_libdir}/libgnuastro.so.20
 %dir %{_sysconfdir}/gnuastro
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/gnuastro/ast*.conf
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/gnuastro/gnuastro.conf
