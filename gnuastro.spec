@@ -8,12 +8,12 @@
 Summary:	GNU Astronomy Utilities
 Summary(pl.UTF-8):	Narzędzia astronomiczne GNU
 Name:		gnuastro
-Version:	0.22
-Release:	2
+Version:	0.23
+Release:	1
 License:	GPL v3+
 Group:		Applications/Science
 Source0:	https://ftp.gnu.org/gnu/gnuastro/%{name}-%{version}.tar.lz
-# Source0-md5:	c75d19818445f3e6dc0bb121cbd885be
+# Source0-md5:	e117816ffd8503f95c92cfc461073fba
 Patch0:		%{name}-info.patch
 Patch1:		ac.patch
 Patch2:		%{name}-link.patch
@@ -32,15 +32,19 @@ BuildRequires:	libjpeg-devel
 BuildRequires:	libtiff-devel
 BuildRequires:	libtool >= 2:2
 BuildRequires:	lzip
+BuildRequires:	make-devel
 BuildRequires:	python3 >= 1:3.2
 BuildRequires:	python3-numpy-devel
 BuildRequires:	rpm-build >= 4.6
 BuildRequires:	tar >= 1:1.22
-BuildRequires:	wcslib-devel
+BuildRequires:	wcslib-devel >= 7.5
 BuildRequires:	xz-devel
 BuildRequires:	zlib-devel
 Suggests:	ghostscript >= 9.10
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+# gmk_add_function defined in make executable
+%define		skip_post_check_so	libgnuastro_make.so.*
 
 %description
 GNU Astronomy Utilities (Gnuastro) is an official GNU package of
@@ -68,7 +72,7 @@ Requires:	gsl-devel
 Requires:	libgit2-devel
 Requires:	libjpeg-devel
 Requires:	libtiff-devel >= 4
-Requires:	wcslib-devel
+Requires:	wcslib-devel >= 7.5
 Requires:	xz-devel
 
 %description devel
@@ -118,7 +122,6 @@ Bashowe uzupełnianie składni poleceń gnuastro.
 %{__autoheader}
 %{__automake}
 %configure \
-	--sysconfdir=%{_sysconfdir}/gnuastro \
 	%{!?with_static_libs:--disable-static}
 %{__make}
 
@@ -129,7 +132,11 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT
 
 # obsoleted by pkg-config
-%{__rm} $RPM_BUILD_ROOT%{_libdir}/libgnuastro.la
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/libgnuastro*.la
+%if %{with static_libs}
+# make plugin
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/libgnuastro_make.a
+%endif
 # packaged as %doc
 %{__rm} $RPM_BUILD_ROOT%{_docdir}/gnuastro/README
 
@@ -179,7 +186,10 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/asttable
 %attr(755,root,root) %{_bindir}/astwarp
 %attr(755,root,root) %{_libdir}/libgnuastro.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libgnuastro.so.20
+%attr(755,root,root) %ghost %{_libdir}/libgnuastro.so.21
+%attr(755,root,root) %{_libdir}/libgnuastro_make.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libgnuastro_make.so.21
+%attr(755,root,root) %{_libdir}/libgnuastro_make.so
 %dir %{_sysconfdir}/gnuastro
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/gnuastro/ast*.conf
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/gnuastro/gnuastro.conf
